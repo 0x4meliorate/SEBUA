@@ -1,6 +1,8 @@
 # SEBUA
 <img src="pictures/SEBUA.gif" width="650" height="auto">
 
+**Created by myself and [MalwareMonster](https://github.com/malwaremonster).**
+
 ## Description
 **SEBUA** is described as a '*Social Engineering Browser Update Attack*'.  
 This is due to user interaction being required. However, the attack itself is very deceiving.
@@ -16,7 +18,9 @@ SEBUA acts as a JavaScript payload that can be used for further exploitation dur
 - It's that simple, either it be an XSS or hosted on your webserver, you should now have jumped to having a beacon.
 
 ## Examples
-
+Chrome overlay             |  Firefox overlay          | Edge overlay
+:-------------------------:|:-------------------------:|:-------------------------:
+![](pictures/Chrome.gif)  |  ![](pictures/Firefox.gif) | ![](pictures/Edge.gif)
 
 ## Additional Information
 The `payload.js` file should be the only thing that is needed.  
