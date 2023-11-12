@@ -1,36 +1,41 @@
 # SEBUA
-<img src="pictures/SEBUA.gif" width="650" height="auto">
 
-> **Created by myself ([0x4meliorate](https://github.com/0x4meliorate)) and [MalwareMonster](https://github.com/malwaremonster).**
+<p align="center">
+  <img src="https://github.com/0x4meliorate/SEBUA/raw/main/pictures/SEBUA.gif" alt="SEBUA custom image"/>
+</p>
+
+> **Created by [myself](https://github.com/0x4meliorate) and [MalwareMonster](https://github.com/malwaremonster).**
 >
-> __Warning: Only use this software according to your current legislation. Misuse of this software can raise legal and ethical issues which I don't support nor can be held responsible for.__
+> :warning: **Warning**: Only use this software according to your current legislation. Misuse of this software can raise legal and ethical issues which I don't support nor can be held responsible for.
 
 ## Description
-**SEBUA** is described as a '*Social Engineering Browser Update Attack*'.  
-This is due to user interaction being required. However, the attack itself is very deceiving.
 
-SEBUA acts as a JavaScript payload that can be used for further exploitation during Red Team engagements:
-- Once executed within the victims browser, SEBUA will detect the browser type (Chrome, Firefox or Edge).
-- When the browser type matches, the `document.write` function in JavaScript is called to inject data into the webpage.
-- The injected data presents a rising overlay that has a similar UI design to the official browser download page.  
-- A demand is made that the browser be updated in order to view the current content.  
-- Once the 'Update' button in the overlay is pressed, a download will occur for the 'downloadLink' variable specified in the JavaScript payload.  
-- Upon downloading the specified binary, a key is set within the localStorage feature of the browser, that stops the overlay from appearing again.  
-- So once we assume the binary has been executed, and a refresh is made to the webpage, nothing should appear out of the ordinary.
-- It's that simple, either it be an XSS or hosted on your webserver, you should now have jumped to having a beacon.
+**SEBUA** is described as a '*Social Engineering Browser Update Attack*'. This attack requires user interaction and is highly deceiving.
+
+### How it Works
+
+- **Browser Detection**: SEBUA detects the browser type (Chrome, Firefox, or Edge).
+- **Data Injection**: Uses `document.write` in JavaScript to inject data into the webpage.
+- **UI Deception**: Displays an overlay mimicking the official browser download page.
+- **Fake Update Prompt**: Demands an update to view content, triggering a download when the 'Update' button is clicked.
+- **Post-Download Behavior**: Sets a key in the browser's localStorage to prevent overlay reappearance after the binary execution.
+- **End Result**: Ideally leads to a beacon after the binary execution.
 
 ## Examples
-Chrome overlay             |  Firefox overlay          | Edge overlay
-:-------------------------:|:-------------------------:|:-------------------------:
-![](pictures/Chrome.gif)  |  ![](pictures/Firefox.gif) | ![](pictures/Edge.gif)
+
+| Chrome overlay | Firefox overlay | Edge overlay |
+| :------------: | :-------------: | :----------: |
+| ![Chrome](https://github.com/0x4meliorate/SEBUA/blob/main/pictures/Chrome.gif) | ![Firefox](https://github.com/0x4meliorate/SEBUA/blob/main/pictures/Firefox.gif) | ![Edge](https://github.com/0x4meliorate/SEBUA/blob/main/pictures/Edge.gif) |
 
 ## Additional Information
-The `payload.js` file should be the only thing that is needed.  
-If you want to create this payload yourself, you will need to create a `document.write` call with obfuscated HTML data in the `payload.js` file.  
-The way this is done is via a project called [html-obfuscator](https://github.com/BinBashBanana/html-obfuscator).  
-You can use the tool mentioned above to de-obfuscate the `document.write` data within the payload, edit what is needed, then re-obfuscate.
+
+The primary component is the `payload.js` file. To create this payload:
+
+1. Use `document.write` with obfuscated HTML in `payload.js`.
+2. Employ [html-obfuscator](https://github.com/BinBashBanana/html-obfuscator) for obfuscation and de-obfuscation.
 
 ## Credits & Resources
-- [BinBashBanana](https://github.com/BinBashBanana) for having the awesome **html-obfuscator** tool that was used in this project.
-- [Browser Detection](https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browsers) useful for detecting browser types.
-- [MalwareBytes](https://www.malwarebytes.com/blog/threat-intelligence/2023/07/socgholish-copycat-delivers-netsupport-rat): FakeSG enters the ‘FakeUpdates’ arena to deliver NetSupport RAT (Inspiration behind this project).
+
+- [BinBashBanana](https://github.com/BinBashBanana) for the **html-obfuscator** tool.
+- [Browser Detection](https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browsers) - Useful for detecting browser types.
+- [MalwareBytes](https://www.malwarebytes.com/blog/threat-intelligence/2023/07/socgholish-copycat-delivers-netsupport-rat) - Article on FakeSG and NetSupport RAT, the inspiration behind this project.
