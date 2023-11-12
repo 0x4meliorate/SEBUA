@@ -1,7 +1,7 @@
 # SEBUA
 <img src="pictures/SEBUA.gif" width="650" height="auto">
 
-**Created by myself and [MalwareMonster](https://github.com/malwaremonster).**
+**Created by myself ([0x4meliorate](https://github.com/0x4meliorate)) and [MalwareMonster](https://github.com/malwaremonster).**
 
 __Warning: Only use this software according to your current legislation. Misuse of this software can raise legal and ethical issues which I don't support nor can be held responsible for.__
 
