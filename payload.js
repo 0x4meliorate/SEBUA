@@ -14,8 +14,7 @@
 // SSSSSSS     S:::::SEE::::::EEEEEEEE:::::EBB:::::BBBBBB::::::B U:::::::UUU:::::::UA:::::A             A:::::A   
 // S::::::SSSSSS:::::SE::::::::::::::::::::EB:::::::::::::::::B   UU:::::::::::::UUA:::::A               A:::::A  
 // S:::::::::::::::SS E::::::::::::::::::::EB::::::::::::::::B      UU:::::::::UU A:::::A                 A:::::A 
-//  SSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEEBBBBBBBBBBBBBBBBB         UUUUUUUUU  AAAAAAA                   AAAAAAA
-                                                                                                               
+//  SSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEEBBBBBBBBBBBBBBBBB         UUUUUUUUU  AAAAAAA                   AAAAAAA                                                                                                               
 // Social Engineering Browser Update Attack //                                                                                                             
 // https://github.com/0x4meliorate/SEBUA //
 
